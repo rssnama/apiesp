@@ -4,7 +4,6 @@ import pytesseract
 from PIL import Image
 from flask import Flask, request, render_template, redirect,jsonify
 import urllib.request
-import os
 from englisttohindi.englisttohindi import EngtoHindi
 
 #from firebase_admin import credentials, firestore, initialize_app
@@ -58,6 +57,6 @@ def upload_image():
             "error": str(e)
         })
     
-port = int(os.environ.get('PORT', 8080))
+
 if __name__ == '__main__':
-    app.run(debug=True, port=2000)
+    app.run(debug=True, host='0.0.0.0')
