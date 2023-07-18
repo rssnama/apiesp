@@ -48,7 +48,7 @@ def upload_image():
 
         return jsonify({
             #"ocr_result": text,
-            "hindi_result": res,
+            "hindi_result": res.convert,
 
         })
 
